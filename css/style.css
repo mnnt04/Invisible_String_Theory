@@ -1,0 +1,713 @@
+/* CUSTOM FONT */
+
+@font-face {
+  font-family: "Velista";
+  src: url("../fonts/VELISTA.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #f8f5ef;
+  color: #382c29;
+  font-family: "Playfair Display", Georgia, serif;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  padding: 35px 20px 10px;
+}
+
+.subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+h1 {
+  font-family: "Velista", serif;
+  font-weight: normal;
+  font-size: clamp(50px, 6vw, 100px);
+  margin: 10px 0;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 550px;
+  margin: auto;
+  color: #746a65;
+}
+
+/* ABOUT PAGE LINK */
+
+.about-link {
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #a3262d;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  opacity: 0.6;
+}
+
+/* GALLERY */
+
+#gallery {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  height: 1100px;
+  margin: 30px auto 0;
+}
+
+#main {
+  position: static;
+}
+
+/* ARTWORKS */
+
+.card {
+  position: absolute;
+  width: 18%;
+  max-width: 280px;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.card h2,
+.card p {
+  display: none;
+}
+
+/* ARTWORK POSITIONS */
+
+/* Kashmir Valley */
+
+.card[data-object-id="acf92807-4f5a-48a2-9602-0d490dfda12f"] {
+  top: 1%;
+  left: 39%;
+}
+
+/* Soldier */
+
+.card[data-object-id="9e31c9b7-b32f-4300-a015-8be27480d935"] {
+  top: 5%;
+  left: 10%;
+}
+
+/* Banyan Tree */
+
+.card[data-object-id="200408302"] {
+  top: 7%;
+  right: 4%;
+}
+
+/* Golden Temple */
+
+.card[data-object-id="200499770"] {
+  top: 38%;
+  left: 5%;
+  right: auto;
+  width: 20%;
+  max-width: 300px;
+}
+
+.card[data-object-id="200499770"] img {
+  height: 270px;
+}
+
+/* Woman Praying */
+
+.card[data-object-id="200412287"] {
+  top: 66%;
+  left: 4%;
+}
+
+/* BABY PHOTO */
+
+#baby-photo {
+  position: absolute;
+  bottom: 0;
+  right: 1%;
+  width: 340px;
+  max-width: 23%;
+  margin: 0;
+  z-index: 3;
+}
+
+#baby-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* RED STRINGS */
+
+#strings {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+.thread {
+  fill: none;
+  stroke: #a3262d;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.85;
+}
+
+/* POPUP */
+
+#popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: #f8f5ef;
+  overflow-y: auto;
+}
+
+.detail-page {
+  min-height: 100vh;
+  padding: 20px 3% 55px;
+}
+
+/* POPUP HEADER */
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border: none;
+}
+
+.detail-header p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #a3262d;
+}
+
+.detail-header-space {
+  width: 150px;
+}
+
+#close-popup {
+  border: none;
+  background: none;
+  color: #382c29;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  width: 150px;
+  padding: 10px 0;
+}
+
+#close-popup:hover {
+  color: #a3262d;
+}
+
+/* TWO-PAGE NOTEBOOK */
+
+.detail-body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 1450px;
+  min-height: 680px;
+  margin: 35px auto 0;
+  align-items: stretch;
+  background: #f2ebdd;
+}
+
+/* THREE-PAGE NOTEBOOK */
+
+.detail-body.three-pages {
+  grid-template-columns: 1fr 1.15fr 1fr;
+}
+
+/* LEFT PAGE */
+
+.detail-image-container {
+  background: #eee5d7;
+  min-height: 680px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-image {
+  display: block;
+  width: 100%;
+  height: 590px;
+  object-fit: contain;
+}
+
+/* MIDDLE PAGE */
+
+.detail-information {
+  position: relative;
+  background: #f5efe5;
+  min-height: 680px;
+  padding: 65px 55px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-information::before,
+.detail-information::after {
+  display: none;
+}
+
+/* RED NOTEBOOK STITCHES */
+
+.detail-body::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  top: 25px;
+  bottom: 25px;
+  left: 50%;
+  width: 26px;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    155deg,
+    transparent 0px,
+    transparent 12px,
+    #a3262d 12px,
+    #a3262d 15.5px,
+    transparent 15.5px,
+    transparent 28px
+  );
+
+  opacity: 0.95;
+}
+
+/* FIRST SEAM IN THREE-PAGE NOTEBOOK */
+
+.detail-body.three-pages::after {
+  left: 31.746%;
+}
+
+/* SECOND SEAM IN THREE-PAGE NOTEBOOK */
+
+.detail-body.three-pages .detail-information::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 4;
+  top: 25px;
+  bottom: 25px;
+  right: -13px;
+  width: 26px;
+  pointer-events: none;
+
+  background: repeating-linear-gradient(
+    155deg,
+    transparent 0px,
+    transparent 12px,
+    #a3262d 12px,
+    #a3262d 15.5px,
+    transparent 15.5px,
+    transparent 28px
+  );
+
+  opacity: 0.95;
+}
+
+/* PERSONAL CONNECTION LABEL */
+
+.detail-label {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #a3262d;
+  margin: 0 0 30px;
+}
+
+/* TITLE */
+
+#popup-title {
+  font-family: "Velista", Georgia, serif;
+  font-size: clamp(42px, 4.2vw, 66px);
+  font-weight: normal;
+  line-height: 1.12;
+  letter-spacing: 0;
+  margin: 0 0 25px;
+}
+
+.three-pages #popup-title {
+  font-size: clamp(34px, 3vw, 50px);
+}
+
+/* ARTIST */
+
+#popup-artist {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  color: #a3262d;
+  line-height: 1.7;
+  margin: 0 0 35px;
+}
+
+/* PERSONAL STORY */
+
+#popup-story {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #514742;
+  margin: 0 0 35px;
+  padding: 0;
+  border: none;
+}
+
+.three-pages #popup-story {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* ORIGINAL ARTWORK LINK */
+
+#popup-source-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #a3262d;
+  text-decoration: none;
+  border: none;
+}
+
+#popup-source-link:hover {
+  opacity: 0.6;
+}
+
+/* RIGHT PAGE: PERSONAL PHOTO */
+
+.detail-personal-photo {
+  display: none;
+  background: #eee5d7;
+  min-height: 680px;
+  padding: 45px 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.three-pages .detail-personal-photo {
+  display: flex;
+}
+
+.personal-photo-label {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #a3262d;
+  margin: 0;
+  text-align: center;
+}
+
+.personal-photo-container {
+  width: 100%;
+  height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup-personal-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+#personal-photo-caption {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #746a65;
+  text-align: center;
+  margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+  .detail-body.three-pages {
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .three-pages .detail-personal-photo {
+    grid-column: 1 / -1;
+    min-height: 500px;
+  }
+
+  .three-pages .detail-information::after {
+    display: none;
+  }
+
+  .detail-body.three-pages::after {
+    left: 47.619%;
+  }
+
+  .three-pages .personal-photo-container {
+    height: 420px;
+  }
+
+  .three-pages #popup-story {
+    font-size: 18px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  header {
+    padding: 30px 15px 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  #gallery {
+    height: 1500px;
+  }
+
+  .card {
+    width: 38%;
+    max-width: none;
+  }
+
+  .card img {
+    height: 210px;
+  }
+
+  .card[data-object-id="acf92807-4f5a-48a2-9602-0d490dfda12f"] {
+    top: 5%;
+    left: 55%;
+  }
+
+  .card[data-object-id="9e31c9b7-b32f-4300-a015-8be27480d935"] {
+    top: 5%;
+    left: 5%;
+  }
+
+  .card[data-object-id="200408302"] {
+    top: 26%;
+    left: 55%;
+    right: auto;
+  }
+
+  .card[data-object-id="200499770"] {
+    top: 30%;
+    left: 2%;
+    right: auto;
+    width: 38%;
+    max-width: none;
+  }
+
+  .card[data-object-id="200499770"] img {
+    height: 230px;
+  }
+
+  .card[data-object-id="200412287"] {
+    top: 61%;
+    left: 5%;
+  }
+
+  #baby-photo {
+    width: 230px;
+    max-width: 50%;
+    right: 2%;
+    bottom: 0;
+  }
+
+  .detail-page {
+    padding: 15px 5% 40px;
+  }
+
+  .detail-header {
+    gap: 10px;
+  }
+
+  .detail-header p {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .detail-header-space {
+    display: none;
+  }
+
+  #close-popup {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .detail-body,
+  .detail-body.three-pages {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-top: 25px;
+  }
+
+  .detail-image-container {
+    min-height: 380px;
+    padding: 25px;
+  }
+
+  #popup-image {
+    height: 330px;
+  }
+
+  .detail-information {
+    min-height: 0;
+    padding: 50px 30px;
+  }
+
+  #popup-title,
+  .three-pages #popup-title {
+    font-size: 44px;
+  }
+
+  #popup-artist {
+    font-size: 17px;
+  }
+
+  #popup-story,
+  .three-pages #popup-story {
+    font-size: 18px;
+    line-height: 1.9;
+  }
+
+  .detail-body::after,
+  .detail-body.three-pages::after,
+  .detail-body.three-pages .detail-information::after {
+    display: none;
+  }
+
+  .detail-information::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -13px;
+    left: 25px;
+    right: 25px;
+    height: 26px;
+
+    background: repeating-linear-gradient(
+      65deg,
+      transparent 0px,
+      transparent 12px,
+      #a3262d 12px,
+      #a3262d 15.5px,
+      transparent 15.5px,
+      transparent 28px
+    );
+  }
+
+  .three-pages .detail-personal-photo {
+    grid-column: auto;
+    min-height: 430px;
+    padding: 45px 25px;
+    position: relative;
+  }
+
+  .personal-photo-container,
+  .three-pages .personal-photo-container {
+    height: 340px;
+  }
+
+  .three-pages .detail-personal-photo::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 25px;
+    right: 25px;
+    height: 26px;
+
+    background: repeating-linear-gradient(
+      65deg,
+      transparent 0px,
+      transparent 12px,
+      #a3262d 12px,
+      #a3262d 15.5px,
+      transparent 15.5px,
+      transparent 28px
+    );
+  }
+}

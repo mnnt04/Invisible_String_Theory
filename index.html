@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Invisible String Theory</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+
+    <header>
+      <p class="subtitle">A PERSONAL ART EXHIBITION</p>
+
+      <h1>Invisible String Theory</h1>
+
+      <p class="intro">
+        Exploring the invisible connections between art, places, memories, and
+        the people we become.
+      </p>
+
+      <a href="about.html" class="about-link"> BEHIND THE STRINGS ↗ </a>
+    </header>
+
+    <!-- GALLERY -->
+
+    <section id="gallery">
+      <svg
+        id="strings"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      ></svg>
+
+      <main id="main"></main>
+
+      <div id="baby-photo">
+        <img src="images/baby.png" alt="A photograph of me as a baby" />
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>SOMEHOW, EVERYTHING IS CONNECTED.</p>
+    </footer>
+
+    <!-- ARTWORK POPUP -->
+
+    <section
+      id="popup"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Artwork details"
+    >
+      <div class="detail-page">
+        <!-- POPUP HEADER -->
+
+        <div class="detail-header">
+          <button id="close-popup" type="button">← BACK TO EXHIBITION</button>
+
+          <p>INVISIBLE STRING THEORY</p>
+
+          <div class="detail-header-space"></div>
+        </div>
+
+        <!-- NOTEBOOK -->
+
+        <div class="detail-body" id="detail-body">
+          <!-- LEFT PAGE: MUSEUM ARTWORK -->
+
+          <div class="detail-image-container">
+            <img id="popup-image" alt="" />
+          </div>
+
+          <!-- MIDDLE PAGE: PERSONAL CONNECTION -->
+
+          <div class="detail-information">
+            <p class="detail-label">A PERSONAL CONNECTION</p>
+
+            <h2 id="popup-title"></h2>
+
+            <p id="popup-artist"></p>
+
+            <p id="popup-story"></p>
+
+            <a
+              id="popup-source-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              VIEW ORIGINAL ARTWORK ↗
+            </a>
+          </div>
+
+          <!-- RIGHT PAGE: PERSONAL PHOTOGRAPH -->
+
+          <div class="detail-personal-photo" id="personal-photo-page">
+            <p class="personal-photo-label">THROUGH MY LENS</p>
+
+            <div class="personal-photo-container">
+              <img id="popup-personal-image" alt="" />
+            </div>
+
+            <p id="personal-photo-caption"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
