@@ -244,7 +244,7 @@ processRijksData(
 processRijksData(
   "200499770",
 
-  "I was born in Amritsar, Punjab, where the Golden Temple is located. It is one of the holiest places for Sikhs. In many families, visiting the Golden Temple after a wedding or the birth of a child is a tradition. This photograph was taken in 1895. Today, the temple is covered in gold and has beautiful ancient artwork and sacred scriptures inside still but the architecture around has chaned. I've visited this place many times, but I've never really thought about how many generations have walked through the same space. It's interesting to see a photograph from over a century ago of a place that has been part of my life since I was born.",
+  "I was born in Amritsar, Punjab, where the Golden Temple is located. It is one of the holiest places for Sikhs. In many families, visiting the Golden Temple after a wedding or the birth of a child is a tradition. This photograph was taken in 1895. Today, the temple is covered in gold and has beautiful ancient artwork and sacred scriptures inside still but the architecture around has changed. I've visited this place many times, but I've never really thought about how many generations have walked through the same space. It's interesting to see a photograph from over a century ago of a place that has been part of my life since I was born.",
 
   "images/golden-temple-personal.JPG",
 
